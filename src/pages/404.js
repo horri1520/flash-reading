@@ -4,7 +4,12 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => {
 
-  return(<div>404</div>)
+  return(
+    <>
+      <SEO title="404 Not found" />
+      404
+    </>
+  )
 }
 
 export default NotFoundPage

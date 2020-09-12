@@ -29,7 +29,7 @@ const Contents = () => {
 
     useEffect(() => {
         if (index < sentences.length - 1 && reading.current) {
-            additionalInterval.current = sentences[index].length * 10
+            additionalInterval.current = sentences[index].length * 15
             const updateIndex = setInterval(() => {
                 setIndex(index + 1)
             }, 200 + additionalInterval.current)
@@ -37,6 +37,7 @@ const Contents = () => {
         } else if (index === sentences.length - 1 && reading.current) {
             reading.current = false
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index, reading.current])
 
     const onClickStart = () => {
