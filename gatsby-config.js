@@ -1,3 +1,12 @@
+const breakPoints = {
+  smartphone: "(max-width: 420px)",
+  mobileWide: "(min-width: 421px)",
+  wxga: "(min-width: 1280px)",
+  mobile: "(max-width: 1023px)",
+  pc: "(min-width: 1024px)",
+  portrait: '(orientation: portrait)',
+}
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,6 +15,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-breakpoints`,
+      options: {
+        queries: breakPoints,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -11,8 +11,6 @@ const Root = styled.div`
 
 const Sentence = styled.p`
     display: inline-block;
-    font-size: 80px;
-    font-weight: 300;
 `
 
 const ShowSentences = ({ sentence }) => {
